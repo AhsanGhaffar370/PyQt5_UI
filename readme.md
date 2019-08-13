@@ -7,7 +7,7 @@ Creating a GUI application on Python using PyQt5
 
 ## Hello World Program Using PyQt5:
 * Create a **Hello** named GUI on **QT Designer** using labels and buttons
-* To convert *Hello.ui* file to *hello.py* you have to write this simple command on cmd *pyuic5 -x "FileLocation\FileName.ui" -o "FileLocation\FileName.py"*
+* To convert *Hello.ui* file to *hello.py* you have to write this simple command on cmd *pyuic5 -x "FileLocation\FileName.ui" -o "FileLocation\FileName.py"* 
 * Now you can run this .py file on pycharm,visual code etc.
 * To print *hello world* by clicking on PushButton, please refer to the file **hello_gui.py**
 
@@ -15,3 +15,4 @@ Creating a GUI application on Python using PyQt5
 1. Hello World Program -> **hello_gui**
 2. Student information form -> **stu_info**
 3. Currency Converter program with filing -> **converter1**
+4. Student Addmission Form Mini Project (In Progress) -> **stundet_form1**
