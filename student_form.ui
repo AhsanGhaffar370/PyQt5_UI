@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
-    <height>644</height>
+    <width>767</width>
+    <height>643</height>
    </rect>
   </property>
   <property name="cursor">
@@ -244,25 +244,12 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_11">
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>  ID:</string>
+       <string>  DATE OF BIRTH:</string>
       </property>
      </widget>
-    </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QSpinBox" name="id_spin"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>  NAME:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="name_txt"/>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_3">
@@ -271,9 +258,6 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QSpinBox" name="age_spin"/>
-    </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_4">
       <property name="text">
@@ -281,10 +265,26 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QLineEdit" name="name_txt"/>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QSpinBox" name="age_spin"/>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QSpinBox" name="id_spin"/>
+    </item>
     <item row="3" column="1">
      <widget class="QRadioButton" name="gm_rb">
       <property name="text">
        <string>MALE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>  ID:</string>
       </property>
      </widget>
     </item>
@@ -304,10 +304,10 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_5">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>  DATE OF BIRTH:</string>
+       <string>  NAME:</string>
       </property>
      </widget>
     </item>
@@ -373,15 +373,15 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
+    <item row="1" column="3">
+     <widget class="QTimeEdit" name="to_time"/>
+    </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_7">
       <property name="text">
        <string>  TIMING:</string>
       </property>
      </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QTimeEdit" name="to_time"/>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_6">
@@ -390,14 +390,11 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QTimeEdit" name="from_time"/>
-    </item>
     <item row="2" column="1" colspan="3">
      <widget class="QComboBox" name="class_co">
       <item>
        <property name="text">
-        <string>Select Class</string>
+        <string>SelectClass</string>
        </property>
       </item>
       <item>
@@ -503,7 +500,7 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
          </rect>
         </property>
         <property name="text">
-         <string>Islaiat</string>
+         <string>Islamiat</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="eng_ck">
@@ -534,6 +531,9 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
        </widget>
       </widget>
      </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTimeEdit" name="from_time"/>
     </item>
    </layout>
   </widget>
