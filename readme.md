@@ -16,3 +16,4 @@ Creating a GUI application on Python using PyQt5
 2. Student information form -> **stu_info**
 3. Currency Converter program with filing -> **converter1**
 4. Student Addmission Form Mini Project (In Progress) -> **stundet_form1**
+5. create examples named project which includes examples of label,lineedit,radiobutton,completer,checkbox etc -> **PyQt5_examples**
