@@ -29,6 +29,9 @@
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
   <property name="accessibleDescription">
    <string/>
   </property>
@@ -244,10 +247,48 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_5">
+    <item row="1" column="1" colspan="2">
+     <widget class="QLineEdit" name="name_txt">
+      <property name="toolTip">
+       <string>enter your name</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="whatsThis">
+       <string>in this text field you have to enter your complete name, dont use digits only characters</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QSpinBox" name="id_spin"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>  DATE OF BIRTH:</string>
+       <string>  GENDER:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QRadioButton" name="gm_rb">
+      <property name="text">
+       <string>MALE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>  NAME:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1" colspan="2">
+     <widget class="QCalendarWidget" name="dob_cal">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(243, 255, 111);
+background-color: rgb(243, 196, 255);</string>
       </property>
      </widget>
     </item>
@@ -258,35 +299,15 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>  GENDER:</string>
+       <string>  DATE OF BIRTH:</string>
       </property>
      </widget>
-    </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="name_txt"/>
     </item>
     <item row="2" column="1" colspan="2">
      <widget class="QSpinBox" name="age_spin"/>
-    </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QSpinBox" name="id_spin"/>
-    </item>
-    <item row="3" column="1">
-     <widget class="QRadioButton" name="gm_rb">
-      <property name="text">
-       <string>MALE</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>  ID:</string>
-      </property>
-     </widget>
     </item>
     <item row="3" column="2">
      <widget class="QRadioButton" name="gf_rb">
@@ -304,19 +325,90 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_11">
       <property name="text">
-       <string>  NAME:</string>
+       <string>  ID:</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1" colspan="2">
-     <widget class="QCalendarWidget" name="dob_cal">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(243, 255, 111);
-background-color: rgb(243, 196, 255);</string>
+    <item row="4" column="1">
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="gf_rb_2">
+         <property name="text">
+          <string>FEMALE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="autoRepeat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="gm_rb_2">
+         <property name="text">
+          <string>MALE</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <layout class="QHBoxLayout" stretch="0,0">
+       <item>
+        <widget class="QRadioButton" name="gf_rb_3">
+         <property name="text">
+          <string>FEMALE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="autoRepeat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="gm_rb_3">
+         <property name="text">
+          <string>MALE</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
@@ -335,6 +427,9 @@ background-color: rgb(243, 196, 255);</string>
      <family>Calibri</family>
      <pointsize>11</pointsize>
     </font>
+   </property>
+   <property name="whatsThis">
+    <string>in this text field you have to enter you have to enter your name, only use characters</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{

@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, uic
 
 def show_info():
 
+
     id1=call.id_spin.text()
     name=call.name_txt.text()
     age=call.age_spin.text()
@@ -33,7 +34,7 @@ def show_info():
     # Class = call.class_co.text()
 
     call.stu_info.addItem("************************************")
-    call.stu_info.addItem("Click coatchings:\n")
+    call.stu_info.addItem("Click coaching:\n")
     call.stu_info.addItem("Student ID: "+id1)
     call.stu_info.addItem("Student name: "+name)
     call.stu_info.addItem("Student age: "+age)

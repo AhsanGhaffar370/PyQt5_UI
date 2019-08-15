@@ -5,11 +5,13 @@ class Window(QWidget):
         QWidget.__init__(self)
         layout = QGridLayout()
         self.setLayout(layout)
+
         radiobutton = QRadioButton("Brazil")
         radiobutton.setChecked(True)
         radiobutton.country = "Brazil"
         radiobutton.toggled.connect(self.on_radio_button_toggled)
         layout.addWidget(radiobutton, 0, 0)
+
         radiobutton = QRadioButton("Argentina")
         radiobutton.country = "Argentina"
         radiobutton.toggled.connect(self.on_radio_button_toggled)

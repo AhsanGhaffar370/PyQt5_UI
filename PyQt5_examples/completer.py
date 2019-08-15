@@ -8,7 +8,11 @@ class Window(QWidget) :
         self.setLayout(layout)
 
         names = ["ahsan","ali","Faraz","osama"]
+
         completer1 = QCompleter(names)
+
+        # completer1.setMaxVisibleItems(1)
+        # completer1.setCaseSensitivity(False)
 
         self.lineedit = QLineEdit( )
         self.lineedit.setCompleter(completer1)

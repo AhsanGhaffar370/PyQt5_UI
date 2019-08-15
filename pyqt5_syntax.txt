@@ -10,7 +10,7 @@ radiobutton.setChecked(True)
 radiobutton.isChecked()
 radiobutton.setIcon(icon)*pr
 
-CHECKBOX:*p
+CHECKBOX:
 checkbox.setText(text)
 checkbox.setChecked(checked)
 checkbox.isChecked()
@@ -34,7 +34,29 @@ completer.setModel(model)*
 completer.model()*
 completer.setCompletionColumn(column)*
 completer.setCompletionMode(mode)*
-completer.setMaxVisibleItems(maximum)*
+completer.setMaxVisibleItems(maximum)
 completer.setCaseSensitivity(sensitivity)
+
+BUTTON GROUP:
+buttongroup = QButtonGroup()
+buttongroup.addButton(button, id)
+buttongroup.removeButton(button)
+buttongroup.buttons()
+buttongroup.button(id)
+buttongroup.id(button)
+buttongroup.setId(button, id)
+buttongroup.setExclusive(exclusive)
+buttongroup.checkedButton()
+The available ButtonGroup signals are:
+	buttonClicked(button)
+	buttonClicked(id)
+	buttonPressed(button)
+	buttonPressed(id)
+	buttonReleased(button)
+	buttonReleased(id)
+	buttonToggled(button)
+	buttonToggled(id)
+
+
 
 
