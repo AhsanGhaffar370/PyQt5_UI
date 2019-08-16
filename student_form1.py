@@ -2,10 +2,9 @@ from PyQt5 import QtWidgets, uic
 
 def show_info():
 
-
-    id1=call.id_spin.text()
+    id1=str(call.id_spin.value())
     name=call.name_txt.text()
-    age=call.age_spin.text()
+    age=str(call.age_spin.value())
     from_time = "FROM: "+ call.from_time.text()
     to_time = " | TO: "+ call.to_time.text()
 
@@ -37,7 +36,7 @@ def show_info():
     call.stu_info.addItem("Click coaching:\n")
     call.stu_info.addItem("Student ID: "+id1)
     call.stu_info.addItem("Student name: "+name)
-    call.stu_info.addItem("Student age: "+age)
+    call.stu_info.addItem("Student age: "+age+" years")
     call.stu_info.addItem("Student gender: "+gender)
     call.stu_info.addItem("TIMING: " + from_time+to_time)
     for i in selected:
@@ -51,6 +50,7 @@ def show_info():
 app=QtWidgets.QApplication([])
 call=uic.loadUi("student_form.ui")
 
+call.age_spin.setSuffix(" years")
 call.submit_btn.clicked.connect(show_info)
 
 call.show()

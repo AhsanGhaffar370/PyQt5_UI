@@ -193,6 +193,10 @@ background-color: rgb(179, 249, 255);</string>
     <property name="text">
      <string>SUBMIT</string>
     </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icon.jpg</normaloff>icon.jpg</iconset>
+    </property>
    </widget>
    <widget class="QPushButton" name="clear_btn">
     <property name="geometry">

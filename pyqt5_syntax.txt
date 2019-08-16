@@ -57,6 +57,31 @@ The available ButtonGroup signals are:
 	buttonToggled(button)
 	buttonToggled(id)
 
+SPINBOX:
+spinbox = QSpinBox()
+spinbox.setValue(value)
+spinbox.value()
+spinbox.setMinimum(value)
+spinbox.setMaximum(value)
+spinbox.setRange(minimum, maximum)
+spinbox.minimum()
+spinbox.maximum()
+spinbox.setPrefix(suffix)
+spinbox.setSuffix(suffix)
+spinbox.setSingleStep(value)
+
+DOUBLE SPIN BOX:
+doublespinbox = QDoubleSpinBox()
+doublespinbox.setValue(value)
+doublespinbox.value()
+doublespinbox.setMinimum(value)
+doublespinbox.setMaximum(value)
+doublespinbox.setRange(minimum, maximum)
+doublespinbox.setPrefix(suffix)
+doublespinbox.setSuffix(suffix)
+doublespinbox.setSingleStep(value)
+
+
 
 
 
