@@ -1,10 +1,13 @@
 from PyQt5 import QtWidgets, uic
+import datetime
+import calendar
 
 def show_info():
 
     id1=str(call.id_spin.value())
     name=call.name_txt.text()
     age=str(call.age_spin.value())
+    dob=str(call.dob_cal.selectedDate())
     from_time = "FROM: "+ call.from_time.text()
     to_time = " | TO: "+ call.to_time.text()
 
@@ -36,6 +39,7 @@ def show_info():
     call.stu_info.addItem("Click coaching:\n")
     call.stu_info.addItem("Student ID: "+id1)
     call.stu_info.addItem("Student name: "+name)
+    call.stu_info.addItem("Student Date Of Birth: " + dob)
     call.stu_info.addItem("Student age: "+age+" years")
     call.stu_info.addItem("Student gender: "+gender)
     call.stu_info.addItem("TIMING: " + from_time+to_time)

@@ -3,6 +3,8 @@ pushbutton.setText(label)
 pushbutton.setFlat(flat)
 pushbutton.isFlat()
 pushbutton.setMenu(Menu)*pr
+signal:
+	pushbutton.clicked.connect(button_clicked_function)
 
 RADIO BUTTON:
 radiobutton.text()
@@ -27,6 +29,9 @@ lineedit.setPlaceholderText(text)
 lineedit.setReadOnly()
 lineedit.setMaxLength(length)
 lineedit.setCompleter(completer)
+signal:
+	lineedit.returnPressed.connect(return_pressed_function)
+	lineedit.textChanged.connect(text_changed_function)
 
 COMPLETER:
 completer = QCompleter(model)
@@ -80,6 +85,48 @@ doublespinbox.setRange(minimum, maximum)
 doublespinbox.setPrefix(suffix)
 doublespinbox.setSuffix(suffix)
 doublespinbox.setSingleStep(value)
+
+COMBO BOX:
+combobox = QComboBox()
+combobox.addItem(text)
+combobox.insertItem(index, text)
+combobox.addItems(text, text, text...)
+combobox.insertItems(index, text, text, text...)
+combobox.insertSeparator(index)
+combobox.removeItem(index)
+combobox.currentIndex()
+combobox.currentText()
+combobox.count()
+combobox.setMaxCount(maximum)
+combobox.setMaxVisibleItems(maximum)
+combobox.showPopup()
+combobox.hidePopup()
+combobox.setCompleter(completer)
+combobox.setDuplicatesEnabled(enable)
+combobox.setEditable(editable)
+combobox.setLineEdit(lineedit)
+combobox.lineEdit()
+combobox.setInsertPolicy(policy)
+
+CALENDER:
+calendar = QCalendarWidget()
+calendar.showToday()
+calendar.showSelectedDate()
+calendar.showNextMonth()
+calendar.showNextYear()
+calendar.showPreviousMonth()
+calendar.showPreviousYear()
+calendar.selectedDate()
+calendar.setCurrentPage(month, year)
+calendar.minimumDate()
+calendar.maximumDate()
+calendar.setMinimumDate(date)
+calendar.setMaximumDate(date)
+calendar.setDateEditEnabled(enabled)
+calendar.isGridVisible(visible)
+calendar.isNavigationBarVisible(visible)
+signal:
+	.selectionChanged()
 
 
 

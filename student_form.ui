@@ -294,6 +294,9 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
        <string notr="true">background-color: rgb(243, 255, 111);
 background-color: rgb(243, 196, 255);</string>
       </property>
+      <property name="gridVisible">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="2" column="0">
