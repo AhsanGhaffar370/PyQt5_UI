@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
 import sys
 
-class Window(QWidget) :
+class Window(QWidget):
     def __init__(self) :
         QWidget.__init__(self)
         layout = QGridLayout( )

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>767</width>
-    <height>643</height>
+    <width>769</width>
+    <height>795</height>
    </rect>
   </property>
   <property name="cursor">
@@ -251,6 +251,27 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>  GENDER:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>  NAME:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QRadioButton" name="gm_rb">
+      <property name="text">
+       <string>MALE</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="1" colspan="2">
      <widget class="QLineEdit" name="name_txt">
       <property name="toolTip">
@@ -265,37 +286,22 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
      </widget>
     </item>
     <item row="0" column="1" colspan="2">
-     <widget class="QSpinBox" name="id_spin"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>  GENDER:</string>
+     <widget class="QSpinBox" name="id_spin">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="value">
+       <number>1</number>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QRadioButton" name="gm_rb">
-      <property name="text">
-       <string>MALE</string>
+    <item row="2" column="1" colspan="2">
+     <widget class="QSpinBox" name="age_spin">
+      <property name="suffix">
+       <string> years</string>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>  NAME:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1" colspan="2">
-     <widget class="QCalendarWidget" name="dob_cal">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(243, 255, 111);
-background-color: rgb(243, 196, 255);</string>
-      </property>
-      <property name="gridVisible">
-       <bool>true</bool>
+      <property name="value">
+       <number>10</number>
       </property>
      </widget>
     </item>
@@ -305,16 +311,6 @@ background-color: rgb(243, 196, 255);</string>
        <string>  AGE:</string>
       </property>
      </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>  DATE OF BIRTH:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QSpinBox" name="age_spin"/>
     </item>
     <item row="3" column="2">
      <widget class="QRadioButton" name="gf_rb">
@@ -339,83 +335,22 @@ background-color: rgb(243, 196, 255);</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
-     <widget class="QGroupBox" name="groupBox_6">
-      <property name="contextMenuPolicy">
-       <enum>Qt::NoContextMenu</enum>
+    <item row="6" column="1" colspan="2">
+     <widget class="QCalendarWidget" name="dob_cal">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(243, 255, 111);
+background-color: rgb(243, 196, 255);</string>
       </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <property name="flat">
+      <property name="gridVisible">
        <bool>true</bool>
       </property>
-      <property name="checkable">
-       <bool>false</bool>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QRadioButton" name="gf_rb_2">
-         <property name="text">
-          <string>FEMALE</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-         <property name="autoRepeat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="gm_rb_2">
-         <property name="text">
-          <string>MALE</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
-    <item row="4" column="2">
-     <widget class="QGroupBox" name="groupBox_7">
-      <property name="title">
-       <string/>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>  DATE OF BIRTH:</string>
       </property>
-      <property name="flat">
-       <bool>true</bool>
-      </property>
-      <layout class="QHBoxLayout" stretch="0,0">
-       <item>
-        <widget class="QRadioButton" name="gf_rb_3">
-         <property name="text">
-          <string>FEMALE</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-         <property name="autoRepeat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="gm_rb_3">
-         <property name="text">
-          <string>MALE</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
    </layout>
@@ -512,6 +447,20 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       <property name="showGroupSeparator" stdset="0">
        <bool>false</bool>
       </property>
+      <property name="maximumTime">
+       <time>
+        <hour>23</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+      <property name="minimumTime">
+       <time>
+        <hour>12</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
       <property name="displayFormat">
        <string>h:mm AP</string>
       </property>
@@ -520,7 +469,7 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
       <property name="time">
        <time>
-        <hour>13</hour>
+        <hour>14</hour>
         <minute>0</minute>
         <second>0</second>
        </time>
@@ -550,12 +499,26 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     </item>
     <item row="1" column="1">
      <widget class="QTimeEdit" name="from_time">
+      <property name="maximumTime">
+       <time>
+        <hour>23</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+      <property name="minimumTime">
+       <time>
+        <hour>12</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
       <property name="currentSection">
        <enum>QDateTimeEdit::HourSection</enum>
       </property>
       <property name="time">
        <time>
-        <hour>13</hour>
+        <hour>12</hour>
         <minute>0</minute>
         <second>0</second>
        </time>
@@ -802,6 +765,42 @@ background-color: rgb(33, 159, 255);</string>
      <string>COACHING</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>650</y>
+     <width>751</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 222, 87);
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Instructions:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* ID should be unique.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Name should be consists of only characters in title format.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Age should be greater than 12 years.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Date of Birth year should be less than 2008.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Timing difference shoud be of 2 hours between (1:00 PM to 6:00 PM).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Minimum of two subjects should be selected.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* We trying to make all precaution about the above given requirements but few things are out of our control to manage, so please fill the form sensibly&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
   </widget>
  </widget>
  <resources/>
