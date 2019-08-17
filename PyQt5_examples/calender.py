@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 import sys
 import calendar
 
@@ -12,10 +13,16 @@ class Window(QWidget):
 
         self.calendar.selectionChanged.connect(self.on_click)
 
+        self.calendar.clicked[QDate].connect(self.showDate)
+
         layout.addWidget(self.calendar)
 
+    def showDate(self,date):
+        print(date.toString( ))
+
     def on_click(self):
-        print(self.calendar.showToday( ))
+
+        print(self.calendar.showToday())
         print(self.calendar.showSelectedDate( ))
         print(self.calendar.showNextMonth( ))
         print(self.calendar.showNextYear( ))

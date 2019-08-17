@@ -461,38 +461,14 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="3">
+    <item row="0" column="2">
      <widget class="QLabel" name="label_9">
       <property name="text">
        <string>  TO</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label_10">
-      <property name="text">
-       <string>  FROM</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QTimeEdit" name="to_time"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>  TIMING:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>  CLASS:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1" colspan="3">
+    <item row="2" column="1" colspan="2">
      <widget class="QComboBox" name="class_co">
       <item>
        <property name="text">
@@ -531,7 +507,62 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </item>
      </widget>
     </item>
-    <item row="3" column="0" colspan="4">
+    <item row="1" column="2">
+     <widget class="QTimeEdit" name="to_time">
+      <property name="showGroupSeparator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="displayFormat">
+       <string>h:mm AP</string>
+      </property>
+      <property name="currentSectionIndex">
+       <number>0</number>
+      </property>
+      <property name="time">
+       <time>
+        <hour>13</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>  TIMING:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>  CLASS:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>  FROM</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTimeEdit" name="from_time">
+      <property name="currentSection">
+       <enum>QDateTimeEdit::HourSection</enum>
+      </property>
+      <property name="time">
+       <time>
+        <hour>13</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
      <widget class="QDockWidget" name="dockWidget_2">
       <property name="floating">
        <bool>false</bool>
@@ -633,9 +664,6 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
        </widget>
       </widget>
      </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QTimeEdit" name="from_time"/>
     </item>
    </layout>
   </widget>

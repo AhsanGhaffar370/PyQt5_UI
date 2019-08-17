@@ -10,6 +10,7 @@ def show_info():
     dob=str(call.dob_cal.selectedDate())
     from_time = "FROM: "+ call.from_time.text()
     to_time = " | TO: "+ call.to_time.text()
+    diff_date=call.from_time.text()-call.to_time.text()
 
     if call.gm_rb.isChecked(): #we can also set the radio button to checked or not by default  call.gm_rb.setChecked(True):
          gender = call.gm_rb.text()
@@ -43,6 +44,7 @@ def show_info():
     call.stu_info.addItem("Student age: "+age+" years")
     call.stu_info.addItem("Student gender: "+gender)
     call.stu_info.addItem("TIMING: " + from_time+to_time)
+    call.stu_info.addItem("Total Hours: " + diff_date)
     for i in selected:
         call.stu_info.addItem(f"Subject{count}: {i}")
         count+=1
