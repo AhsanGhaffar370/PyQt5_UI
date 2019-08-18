@@ -15,5 +15,6 @@ Creating a GUI application on Python using PyQt5
 1. Hello World Program -> **hello_gui**
 2. Student information form -> **stu_info**
 3. Currency Converter program with filing -> **converter1**
-4. Student Addmission Form Mini Project (In Progress) -> **stundet_form1**
+4. Student Addmission Form Mini Project (In Progress) -> **Student_Reg_form_Project** *(directory)*
 5. create examples named project which includes examples of label,lineedit,radiobutton,completer,checkbox etc -> **PyQt5_examples**
+6. create a simple standard calculator -> **simpleCalculator**
