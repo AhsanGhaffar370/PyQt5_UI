@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>769</width>
-    <height>795</height>
+    <width>770</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="cursor">
@@ -39,7 +39,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(226, 255, 217);</string>
+   <string notr="true">background-color: rgb(184, 188, 255);</string>
   </property>
   <widget class="QGroupBox" name="groupBox_4">
    <property name="geometry">
@@ -72,7 +72,7 @@
      <string>SAVE FORM</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="cancel_btn">
+   <widget class="QPushButton" name="discard_btn">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -109,7 +109,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QListView{
-	background-color: rgb(243, 213, 255);
+	background-color:  rgb(228, 231, 255);
 }</string>
    </property>
    <property name="title">
@@ -129,8 +129,8 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>431</width>
-     <height>51</height>
+     <width>751</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -150,7 +150,8 @@
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 85, 0);</string>
+    <string notr="true">color: rgb(184, 188, 255);
+background-color: rgb(170, 0, 255);</string>
    </property>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
@@ -220,9 +221,9 @@ background-color: rgb(255, 170, 127);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>50</y>
+     <y>70</y>
      <width>432</width>
-     <height>341</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="font">
@@ -236,12 +237,12 @@ background-color: rgb(255, 170, 127);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 172);
+	color: rgb(60, 0, 90);
+	background-color: rgb(228, 231, 255);
 }
 QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeEdit{
-	
-	background-color: rgb(243, 213, 255);
+
+	background-color:  rgb(228, 231, 255);
 }</string>
    </property>
    <property name="title">
@@ -251,69 +252,61 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="0">
+    <item row="4" column="0">
      <widget class="QLabel" name="label_4">
       <property name="text">
        <string>  GENDER:</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
        <string>  NAME:</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QRadioButton" name="gm_rb">
+    <item row="4" column="1">
+     <widget class="QRadioButton" name="male_rb">
       <property name="text">
        <string>MALE</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="name_txt">
-      <property name="toolTip">
-       <string>enter your name</string>
-      </property>
-      <property name="toolTipDuration">
-       <number>-1</number>
-      </property>
-      <property name="whatsThis">
-       <string>in this text field you have to enter your complete name, dont use digits only characters</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QSpinBox" name="id_spin">
-      <property name="enabled">
+    <item row="3" column="1" colspan="2">
+     <widget class="QSpinBox" name="age_spin">
+      <property name="readOnly">
        <bool>false</bool>
       </property>
-      <property name="value">
-       <number>1</number>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QSpinBox" name="age_spin">
       <property name="suffix">
        <string> years</string>
+      </property>
+      <property name="minimum">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <number>22</number>
       </property>
       <property name="value">
        <number>10</number>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>  AGE:</string>
+    <item row="0" column="1" colspan="2">
+     <widget class="QSpinBox" name="id_spin">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="value">
+       <number>1</number>
       </property>
      </widget>
     </item>
-    <item row="3" column="2">
-     <widget class="QRadioButton" name="gf_rb">
+    <item row="4" column="2">
+     <widget class="QRadioButton" name="female_rb">
       <property name="text">
        <string>FEMALE</string>
       </property>
@@ -328,6 +321,26 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QLineEdit" name="name_txt">
+      <property name="toolTip">
+       <string>enter your name</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="whatsThis">
+       <string>in this text field you have to enter your complete name, dont use digits only characters</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>  AGE:</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label_11">
       <property name="text">
@@ -335,18 +348,44 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="6" column="1" colspan="2">
+    <item row="7" column="1" colspan="2">
      <widget class="QCalendarWidget" name="dob_cal">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(243, 255, 111);
-background-color: rgb(243, 196, 255);</string>
+       <string notr="true">color: rgb(60, 0, 90);
+background-color:  rgb(228, 231, 255);</string>
+      </property>
+      <property name="minimumDate">
+       <date>
+        <year>1996</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+      <property name="maximumDate">
+       <date>
+        <year>2009</year>
+        <month>12</month>
+        <day>31</day>
+       </date>
       </property>
       <property name="gridVisible">
        <bool>true</bool>
       </property>
+      <property name="horizontalHeaderFormat">
+       <enum>QCalendarWidget::ShortDayNames</enum>
+      </property>
+      <property name="verticalHeaderFormat">
+       <enum>QCalendarWidget::NoVerticalHeader</enum>
+      </property>
+      <property name="navigationBarVisible">
+       <bool>true</bool>
+      </property>
+      <property name="dateEditEnabled">
+       <bool>false</bool>
+      </property>
      </widget>
     </item>
-    <item row="6" column="0">
+    <item row="7" column="0">
      <widget class="QLabel" name="label_5">
       <property name="text">
        <string>  DATE OF BIRTH:</string>
@@ -375,12 +414,11 @@ background-color: rgb(243, 196, 255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-	color: rgb(0, 85, 0);
-	background-color: rgb(255, 255, 172);
+	color: rgb(60, 0, 90);
+	background-color: rgb(228, 231, 255);
 }
 QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeEdit{
-	
-	background-color: rgb(243, 213, 255);
+	background-color:  rgb(228, 231, 255);
 }</string>
    </property>
    <property name="title">
@@ -396,93 +434,6 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
     <bool>false</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="2">
-     <widget class="QLabel" name="label_9">
-      <property name="text">
-       <string>  TO</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QComboBox" name="class_co">
-      <item>
-       <property name="text">
-        <string>SelectClass</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>9th</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>10th</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>11h</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12th</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>MCAT</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>ECAT</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QTimeEdit" name="to_time">
-      <property name="showGroupSeparator" stdset="0">
-       <bool>false</bool>
-      </property>
-      <property name="maximumTime">
-       <time>
-        <hour>23</hour>
-        <minute>0</minute>
-        <second>0</second>
-       </time>
-      </property>
-      <property name="minimumTime">
-       <time>
-        <hour>12</hour>
-        <minute>0</minute>
-        <second>0</second>
-       </time>
-      </property>
-      <property name="displayFormat">
-       <string>h:mm AP</string>
-      </property>
-      <property name="currentSectionIndex">
-       <number>0</number>
-      </property>
-      <property name="time">
-       <time>
-        <hour>14</hour>
-        <minute>0</minute>
-        <second>0</second>
-       </time>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="text">
-       <string>  TIMING:</string>
-      </property>
-     </widget>
-    </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_6">
       <property name="text">
@@ -525,107 +476,136 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
       </property>
      </widget>
     </item>
-    <item row="3" column="0" colspan="3">
-     <widget class="QDockWidget" name="dockWidget_2">
-      <property name="floating">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>  TO</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QComboBox" name="class_co">
+      <item>
+       <property name="text">
+        <string>SelectClass</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9th</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10th</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QTimeEdit" name="to_time">
+      <property name="showGroupSeparator" stdset="0">
        <bool>false</bool>
       </property>
-      <property name="windowTitle">
-       <string>Subjects</string>
+      <property name="maximumTime">
+       <time>
+        <hour>23</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
       </property>
-      <widget class="QWidget" name="dockWidgetContents_2">
-       <widget class="QCheckBox" name="sci_ck">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>7</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Science</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="math_ck">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>30</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Math</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>3</x>
-          <y>7</y>
-          <width>131</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>   Subjects:</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="urdu_ck">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>7</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Urdu</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="isl_ck">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>30</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Islamiat</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="eng_ck">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>30</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>English</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="phy_ck">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>10</y>
-          <width>81</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Physics</string>
-        </property>
-       </widget>
-      </widget>
+      <property name="minimumTime">
+       <time>
+        <hour>12</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+      <property name="displayFormat">
+       <string>h:mm AP</string>
+      </property>
+      <property name="currentSectionIndex">
+       <number>0</number>
+      </property>
+      <property name="time">
+       <time>
+        <hour>14</hour>
+        <minute>0</minute>
+        <second>0</second>
+       </time>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="2">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>  TIMING:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" rowspan="2" colspan="2">
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="one_ck">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="two_ck">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="three_ck">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="four_ck">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>---</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="0" rowspan="2">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>   Subjects:</string>
+      </property>
      </widget>
     </item>
    </layout>
@@ -634,13 +614,15 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>60</y>
+     <y>80</y>
      <width>311</width>
-     <height>181</height>
+     <height>151</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(223, 255, 19, 255), stop:0.16 rgba(91, 136, 22, 255), stop:0.225 rgba(64, 166, 41, 255), stop:0.285 rgba(74, 204, 83, 255), stop:0.345 rgba(109, 235, 102, 255), stop:0.415 rgba(114, 245, 112, 255), stop:0.52 rgba(76, 181, 209, 255), stop:0.57 rgba(51, 164, 187, 255), stop:0.635 rgba(42, 115, 168, 255), stop:0.695 rgba(75, 68, 202, 255), stop:0.75 rgba(116, 86, 218, 255), stop:0.815 rgba(155, 73, 208, 255), stop:0.88 rgba(187, 51, 120, 255), stop:0.935 rgba(137, 26, 54, 255), stop:1 rgba(202, 255, 19, 255));</string>
+    <string notr="true">color: rgb(184, 188, 255);
+background-color: rgb(85, 0, 127);
+background-color: rgb(184, 188, 255);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -651,87 +633,9 @@ QLineEdit, QSpinBox, QRadioButton, QCalendarWidget, QCheckBox, QComboBox, QTimeE
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>191</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Std Black</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="contextMenuPolicy">
-     <enum>Qt::DefaultContextMenu</enum>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 85, 0);
-background-color: rgb(174, 247, 255);</string>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="midLineWidth">
-     <number>2</number>
-    </property>
-    <property name="text">
-     <string>CLICK</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>110</y>
-      <width>121</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Std Black</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="contextMenuPolicy">
-     <enum>Qt::DefaultContextMenu</enum>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 85, 0);
-background-color: rgb(0, 85, 255);</string>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="midLineWidth">
-     <number>2</number>
-    </property>
-    <property name="text">
-     <string>CENTRE</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_13">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>60</y>
-      <width>211</width>
+      <width>311</width>
       <height>51</height>
      </rect>
     </property>
@@ -752,8 +656,87 @@ background-color: rgb(0, 85, 255);</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 85, 0);
-background-color: rgb(33, 159, 255);</string>
+     <string notr="true">
+background-color: rgb(170, 0, 255);</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="midLineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string>CLICK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>100</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Std Black</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(190, 133, 255);
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="midLineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string>CENTRE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>50</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Std Black</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(170, 85, 255);</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
@@ -763,6 +746,71 @@ background-color: rgb(33, 159, 255);</string>
     </property>
     <property name="text">
      <string>COACHING</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>51</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>110</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
@@ -775,7 +823,7 @@ background-color: rgb(33, 159, 255);</string>
      <x>10</x>
      <y>650</y>
      <width>751</width>
-     <height>141</height>
+     <height>161</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -792,14 +840,143 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Instructions:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* ID should be unique.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Name should be consists of only characters in title format.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Age should be greater than 12 years.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Date of Birth year should be less than 2008.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Timing difference shoud be of 2 hours between (1:00 PM to 6:00 PM).&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Minimum of two subjects should be selected.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;ID&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; should be unique.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;Name&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; should be consists of only characters in title format.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;Age&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; should be greater than 12 years.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;Date of Birth&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; year should be less than 2008.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;Timing difference&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; shoud be of 2 hours between (1:00 PM to 6:00 PM).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* Minimum of two &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;subjects&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; should be selected.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;*After clicking on &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;SUBMIT&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; , you have to click on &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;SAVE FORM&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt; button to save form successfully, otherwise the form will be override by next form&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;* We trying to make all precaution about the above given requirements but few things are out of our control to manage, so please fill the form sensibly&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_8">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_9">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_10">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_11">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_12">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>60</y>
+     <width>20</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_13">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>60</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
    </property>
   </widget>
  </widget>

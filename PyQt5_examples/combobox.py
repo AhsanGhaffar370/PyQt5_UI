@@ -18,6 +18,7 @@ class Window(QWidget):
 
         self.combobox.insertSeparator(2)
 
+        self.combobox.setCurrentText("grapes")
         # self.combobox.setDuplicatesEnabled(False)
 
         self.combobox.currentTextChanged.connect(self.combobox_changed)

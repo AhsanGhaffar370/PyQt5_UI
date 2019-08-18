@@ -17,18 +17,30 @@ class Window(QWidget):
 
         layout.addWidget(self.calendar)
 
+
     def showDate(self,date):
-        print(date.toString( ))
+        print("\nshow date")
+        print(date.toString())
+
+        print(date.day())
+        print(date.month())
+        print(date.year())
 
     def on_click(self):
+        print("\non click")
+        print(self.calendar.selectedDate().day())
+        print(self.calendar.selectedDate().month( ))
+        print(self.calendar.selectedDate().year( ))
 
-        print(self.calendar.showToday())
-        print(self.calendar.showSelectedDate( ))
-        print(self.calendar.showNextMonth( ))
-        print(self.calendar.showNextYear( ))
-        print(self.calendar.showPreviousMonth( ))
-        print(self.calendar.showPreviousYear( ))
-        print(self.calendar.selectedDate( ))
+        self.calendar.setCurrentPage(2018,2)
+
+        # print(self.calendar.showToday())
+        # print(self.calendar.showSelectedDate( ))
+        # print(self.calendar.showNextMonth( ))
+        # print(self.calendar.showNextYear( ))
+        # print(self.calendar.showPreviousMonth( ))
+        # print(self.calendar.showPreviousYear( ))
+        # print(self.calendar.selectedDate( ))
 
 app = QApplication(sys.argv)
 screen = Window()
