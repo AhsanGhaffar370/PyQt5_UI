@@ -83,10 +83,17 @@ def dot_disp():
 
     call.disp_lb.setText(nums)
 
-def add_oper():
-    # oper=call.fdisp.text()+call.disp.text()+" + "
+def add_oper():###############################################start here
     oper=call.disp_lb.text()+" + "
-    call.fdisp_lb.setText(oper)
+    # oper=call.fdisp.text()+call.disp.text()+" + "
+    if call.fdisp_lb.text() == "":
+        call.fdisp_lb.setText(oper)
+    else:
+        if call.disp_lb.text() != "+":
+            call.fdisp_lb.setText(oper)
+        else:
+            call.fdisp_lb.setText("Undefined Operation")
+    
     call.disp_lb.clear()
 
 def sub_oper():
@@ -105,6 +112,7 @@ def div_oper():
     call.disp_lb.clear()
 
 def equals_oper():
+    flag=True
     oper = call.fdisp_lb.text()+call.disp_lb.text()
     call.fdisp_lb.setText(oper)
     val=call.fdisp_lb.text()
@@ -112,7 +120,9 @@ def equals_oper():
 
     nums=val.split()
 
-    if nums[1] == "+":
+    if call.fdisp_lb.text() == call.disp_lb.text():
+        ans = float(nums[0])
+    elif nums[1] == "+":
         ans = float(nums[0]) + float(nums[2])
     elif nums[1] == "-":
         ans = float(nums[0]) - float(nums[2])
@@ -120,11 +130,13 @@ def equals_oper():
         ans = float(nums[0]) * float(nums[2])
     elif nums[1] == "/":
         ans = float(nums[0]) / float(nums[2])
+    else:
+        flag=False
 
-    call.disp_lb.setText(str(ans))
+    if flag==True:
+        call.disp_lb.setText(str(ans))
 
-    # equal_flag= True
-    call.ans_lb.setText("answer")
+        call.ans_lb.setText("answer")
 
 def cler():
     call.disp_lb.clear()
